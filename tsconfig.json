@@ -14,7 +14,7 @@
       "rootDir": "./src",
       "noEmit": false,
       "outDir": "./build",
-      "types": ["./src/type.d.ts"]
+      "typeRoots": ["./node_modules/@types"]
    },
    "exclude": [
       "build"
