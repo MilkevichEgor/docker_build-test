@@ -27,6 +27,7 @@ const io = new Server(httpServer, {
       console.log(`Server is waiting for a connection on a port ${config.port}`);
     });
   } catch (error) {
+    console.log('err', error)
     return error;
   }
 })();

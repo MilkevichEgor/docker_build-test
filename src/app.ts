@@ -12,8 +12,11 @@ const app = express();
 app.use(express.json({ limit: '10mb' }));
 app.use(cors({ origin: [config.clientURL] }));
 app.use(express.static('public'));
-
-app.use(generalRouter);
+app.use((req, res, next) => {
+  console.log('here we go');
+  next();
+});
+app.use('/api', generalRouter);
 
 app.use(errorHandler);
 
